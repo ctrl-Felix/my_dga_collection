@@ -1,3 +1,4 @@
 humanhash3>=0.0.6
 pypdf>=5.6.1
 requests>=2.32.4
+pyinstaller>=6.14.1
