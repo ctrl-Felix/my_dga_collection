@@ -19,7 +19,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='windows',  # Exported executable name
+    name='very_safe_and_secure',  # Exported executable name
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
