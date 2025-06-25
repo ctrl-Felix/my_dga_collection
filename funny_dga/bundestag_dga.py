@@ -10,14 +10,12 @@ def dga():
     retry = True
     while retry:
         try:
-            vorgang = get("https://search.dip.bundestag.de/api/v1/vorgangsposition/1?format=json&apikey=OSOegLs.PR2lwJ1dwCeje9vTj7FPOt3hvpYKtwKkhw")
+            on_fly_mem_obj = io.BytesIO(get("https://dserver.bundestag.de/btd/16/000/1600001.pdf").content)
             retry = False
         except:
             retry = True
             time.sleep(1)
 
-    dokument = vorgang.json()["fundstelle"]["pdf_url"]
-    on_fly_mem_obj = io.BytesIO(get(dokument).content)
     reader = PdfReader(on_fly_mem_obj)
 
     for page in reader.pages:
